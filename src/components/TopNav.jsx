@@ -1,10 +1,11 @@
 import "../styles/TopNav.scss";
+import Logo from "assets/griffinLogo.svg";
 
 function TopNav() {
   return (
     <nav>
       <div className="left-side">
-        <div>logo</div>
+        <img src={Logo} alt="Logo" />
       </div>
       <ul className="right-side">
         <li>Projects</li>
