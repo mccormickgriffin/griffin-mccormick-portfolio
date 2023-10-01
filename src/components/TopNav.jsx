@@ -1,4 +1,4 @@
-import "../styles/TopNav.scss";
+import "styles/TopNav.scss";
 import Logo from "assets/griffinLogo.svg";
 
 function TopNav() {

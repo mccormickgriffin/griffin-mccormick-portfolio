@@ -1,6 +1,6 @@
-import "../styles/MainPage.scss";
-import LeftNav from "./LeftNav";
-import MainPageContent from "./MainPageContent";
+import "styles/MainPage.scss";
+import LeftNav from "components/LeftNav";
+import MainPageContent from "components/MainPageContent";
 
 
 function MainPage() {

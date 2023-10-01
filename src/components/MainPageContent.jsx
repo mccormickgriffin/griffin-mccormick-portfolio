@@ -1,4 +1,4 @@
-import "../styles/MainPage.scss";
+import "styles/MainPage.scss";
 
 
 function MainPageContent() {
