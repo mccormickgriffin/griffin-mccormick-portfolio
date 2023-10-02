@@ -7,7 +7,7 @@ import { PATHS } from "lib/paths";
 function MainNavItem({ label, clickHandler }) {
   return (
     <div>
-      <button onClick={clickHandler}>{label}</button>
+      <button onClick={clickHandler} type="button">{label}</button>
     </div>
   );
 }
