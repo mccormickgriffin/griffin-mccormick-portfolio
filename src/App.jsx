@@ -1,13 +1,17 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import './App.css';
 import TopNav from './components/TopNav';
 import MainPage from './components/MainPage';
 
 function App() {
   return (
-    <div className="App">
-      <TopNav/>
-      <MainPage/>
-    </div>
+    <Router>
+      <div className="App">
+        <TopNav/>
+        <MainPage/>
+      </div>
+    </Router>
   );
 }
 

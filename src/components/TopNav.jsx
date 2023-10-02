@@ -8,8 +8,6 @@ function TopNav() {
         <img src={Logo} alt="Logo" />
       </div>
       <ul className="right-side">
-        <li>Projects</li>
-        <li>Experience</li>
         <li>Face</li>
       </ul>
     </nav>
