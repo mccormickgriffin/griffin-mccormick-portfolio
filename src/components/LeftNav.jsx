@@ -17,11 +17,11 @@ function LeftNav() {
   const navigate = useNavigate();
 
   const navItems = [
-    { label: "About Me", path: PATHS.ABOUT_ME, children: [] },
-    { label: "Experience", path: PATHS.EXPERIENCE, children: [] },
-    { label: "Mini Projects", path: PATHS.MINI_PROJECTS, children: [] },
-    { label: "Full Projects", path: PATHS.FULL_PROJECTS, children: [] },
-    { label: "Contact", path: PATHS.CONTACT, children: [] },
+    { label: "About Me", path: PATHS.ABOUT_ME },
+    { label: "Experience", path: PATHS.EXPERIENCE },
+    { label: "Mini Projects", path: PATHS.MINI_PROJECTS },
+    { label: "Full Projects", path: PATHS.FULL_PROJECTS },
+    { label: "Contact", path: PATHS.CONTACT },
   ];
 
   function handleNavClick(path) {
