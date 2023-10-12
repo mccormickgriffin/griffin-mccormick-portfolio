@@ -1,9 +1,10 @@
 import "styles/MiniProjects.scss";
+import Orbits from "./ArtWidgets/Orbits";
 
 function MiniProjects() {
   return (
     <div>
-      Mini Projects Placeholder
+        <Orbits />
     </div>
   );
 }
