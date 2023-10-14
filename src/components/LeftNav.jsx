@@ -1,8 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
 import "styles/LeftNav.scss";
-import { PATHS } from "lib/paths";
+import { NAV_ITEMS } from "lib/consts";
 
 function MainNavItem({ label, clickHandler }) {
   return (
@@ -13,28 +10,17 @@ function MainNavItem({ label, clickHandler }) {
 }
 
 function LeftNav() {
-  const [selectedNav, setSelectedNav] = useState(PATHS.ABOUT_ME);
-  const navigate = useNavigate();
-
-  const navItems = [
-    { label: "About Me", path: PATHS.ABOUT_ME },
-    { label: "Experience", path: PATHS.EXPERIENCE },
-    { label: "Mini Projects", path: PATHS.MINI_PROJECTS },
-    { label: "Full Projects", path: PATHS.FULL_PROJECTS },
-    { label: "Contact", path: PATHS.CONTACT },
-  ];
-
-  function handleNavClick(path) {
-    setSelectedNav(path);
-    navigate(path);
+  function handleNavClick() {
+    // TO DO
+    return;
   }
 
   return (
     <div className="left-nav">
-      {navItems.map((navItem) => {
+      {NAV_ITEMS.map((navItem) => {
         return (
           <MainNavItem
-            clickHandler={() => handleNavClick(navItem.path)}
+            clickHandler={() => handleNavClick()}
             key={navItem.path}
             label={navItem.label}
           />
