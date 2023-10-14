@@ -7,9 +7,6 @@ function TopNav() {
       <div className="left-side">
         <img src={Logo} alt="Logo" />
       </div>
-      <ul className="right-side">
-        <li>Face</li>
-      </ul>
     </nav>
   );
 }
