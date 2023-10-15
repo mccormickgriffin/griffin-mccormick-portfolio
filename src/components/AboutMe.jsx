@@ -2,9 +2,9 @@ import "styles/AboutMe.scss";
 
 function AboutMe() {
   return (
-    <div>
+    <div id="about-me">
       <h1>
-        Hi! My name is Griffin and I am a full stack web developer 
+        Hi! My name is Griffin and I am a full stack web developer.
       </h1>
       <p>
         I love all things technology from developing web and mobile application to playing video games.

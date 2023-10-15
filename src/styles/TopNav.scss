@@ -1,13 +1,15 @@
 @import "colors";
+@import "spacing";
 
 .top-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: $top-nav-height;
 }
 
 .right-side {
   display: flex;
-  align-items: center;
   gap: 16px;
 
   button {
