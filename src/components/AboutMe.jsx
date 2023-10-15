@@ -1,8 +1,9 @@
 import "styles/AboutMe.scss";
+import { SECTION_IDS } from "lib/consts";
 
 function AboutMe() {
   return (
-    <div id="about-me">
+    <section id={SECTION_IDS.ABOUT_ME}>
       <h1>
         Hi! My name is Griffin and I am a full stack web developer.
       </h1>
@@ -10,7 +11,7 @@ function AboutMe() {
         I love all things technology from developing web and mobile application to playing video games.
         I have always been passionate about both learning and teaching software development techniques and principles.
       </p>
-    </div>
+    </section>
   );
 }
 

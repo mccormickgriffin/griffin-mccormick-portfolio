@@ -1,10 +1,12 @@
 import "styles/FullProjects.scss";
+import { SECTION_IDS } from "lib/consts";
+
 
 function FullProjects() {
   return (
-    <div>
+    <section id={SECTION_IDS.FULL_PROJECTS}>
       Full Projects Placeholder
-    </div>
+    </section>
   );
 }
 

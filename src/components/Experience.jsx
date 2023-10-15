@@ -1,10 +1,11 @@
 import "styles/Experience.scss";
+import { SECTION_IDS } from "lib/consts";
 
 function Experience() {
   return (
-    <div>
+    <section id={SECTION_IDS.EXPERIENCE}>
       Experience Placeholder
-    </div>
+    </section>
   );
 }
 

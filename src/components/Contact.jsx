@@ -1,10 +1,11 @@
 import "styles/Contact.scss";
+import { SECTION_IDS } from "lib/consts";
 
 function Contact() {
   return (
-    <div>
+    <section id={SECTION_IDS.CONTACT}>
       Contact Placeholder
-    </div>
+    </section>
   );
 }
 

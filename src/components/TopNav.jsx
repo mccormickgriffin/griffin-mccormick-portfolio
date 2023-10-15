@@ -3,6 +3,15 @@ import Logo from "assets/griffinLogo.svg";
 import { NAV_ITEMS } from "lib/consts";
 
 function TopNav() {
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+
   return (
     <nav className="top-nav">
       <div className="left-side">
@@ -10,7 +19,12 @@ function TopNav() {
       </div>
       <div className="right-side">
         {NAV_ITEMS.map((navItem) => (
-          <button type="button">{navItem.label}</button>
+          <button
+            onClick={() => scrollToSection(navItem.scrollId)}
+            type="button"
+          >
+            {navItem.label}
+          </button>
         ))}
       </div>
     </nav>
