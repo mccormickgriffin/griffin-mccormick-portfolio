@@ -1,3 +1,7 @@
 $top-nav-height: 84px;
 
 $padding-large: 64px;
+
+:root {
+    --top-nav-height: #{$top-nav-height};
+}

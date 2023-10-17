@@ -10,7 +10,7 @@ function TopNav() {
       block: "start",
       inline: "nearest",
     });
-  }
+  } 
 
   return (
     <header className="top-nav">
@@ -20,6 +20,7 @@ function TopNav() {
       <nav className="nav-links">
         {NAV_ITEMS.map((navItem) => (
           <button
+            key={navItem.scrollId}
             onClick={() => scrollToSection(navItem.scrollId)}
             type="button"
           >
