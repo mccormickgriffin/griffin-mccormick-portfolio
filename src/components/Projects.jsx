@@ -1,13 +1,13 @@
-import "styles/MiniProjects.scss";
+import "styles/Projects.scss";
 import { SECTION_IDS } from "lib/consts";
 import Orbits from "./ArtWidgets/Orbits";
 
-function MiniProjects() {
+function Projects() {
   return (
-    <section id={SECTION_IDS.MINI_PROJECTS}>
+    <section id={SECTION_IDS.PROJECTS}>
         <Orbits />
     </section>
   );
 }
 
-export default MiniProjects;
+export default Projects;

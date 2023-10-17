@@ -1,8 +1,7 @@
 import "styles/MainPageContent.scss";
 import AboutMe from "./AboutMe";
 import Experience from "./Experience";
-import MiniProjects from "./MiniProjects";
-import FullProjects from "./FullProjects";
+import Projects from "./Projects";
 import Contact from "./Contact";
 
 function MainPageContent() {
@@ -10,8 +9,7 @@ function MainPageContent() {
     <div className="main-page-content">
       <AboutMe />
       <Experience />
-      <MiniProjects />
-      <FullProjects />
+      <Projects />
       <Contact />
     </div>
   );
