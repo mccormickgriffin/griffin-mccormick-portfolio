@@ -14,7 +14,7 @@
   z-index: 1;
   backdrop-filter: blur(4px);
   background-image: linear-gradient(to right, transparent, $text, transparent);
-  background-size: 100% .5px;
+  background-size: 100% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
 }
