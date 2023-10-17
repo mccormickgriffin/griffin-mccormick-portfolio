@@ -13,11 +13,11 @@ function TopNav() {
   }
 
   return (
-    <nav className="top-nav">
-      <div className="left-side">
+    <header className="top-nav">
+      <div>
         <img src={Logo} alt="Logo" />
       </div>
-      <div className="right-side">
+      <nav className="nav-links">
         {NAV_ITEMS.map((navItem) => (
           <button
             onClick={() => scrollToSection(navItem.scrollId)}
@@ -26,8 +26,8 @@ function TopNav() {
             {navItem.label}
           </button>
         ))}
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
 
