@@ -1,3 +1,6 @@
+@import "spacing";
+
 .main-page {
     display: flex;
+    padding: $top-nav-height $padding-large;
 }

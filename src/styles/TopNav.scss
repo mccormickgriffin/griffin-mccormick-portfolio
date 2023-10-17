@@ -6,6 +6,17 @@
   justify-content: space-between;
   align-items: center;
   height: $top-nav-height;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 $padding-large;
+  z-index: 1;
+  backdrop-filter: blur(4px);
+  background-image: linear-gradient(to right, transparent, $text, transparent);
+  background-size: 100% .5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
 }
 
 .nav-links {
