@@ -1,8 +1,8 @@
 export const SECTION_IDS = {
-  ABOUT_ME: "about-me-section",
-  EXPERIENCE: "experience-section",
-  PROJECTS: "projects-section",
-  CONTACT: "contact-section",
+  ABOUT_ME: "about-me",
+  EXPERIENCE: "experience",
+  PROJECTS: "projects",
+  CONTACT: "contact",
 };
 
 export const NAV_ITEMS = [
