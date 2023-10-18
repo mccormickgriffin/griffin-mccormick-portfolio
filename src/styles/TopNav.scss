@@ -17,6 +17,17 @@
   background-size: 100% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
+
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+.home-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
 }
 
 .nav-links {
@@ -33,7 +44,6 @@
     color: $primary;
 
     &:hover {
-      cursor: pointer;
       background-color: $text;
       color: $background;
       border: 2px solid $text;
