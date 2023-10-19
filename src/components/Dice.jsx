@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "styles/Dice.scss";
 
-const sides = ['One', 'Two', 'Three', 'Four', 'Five', 'Six'];
+const sides = ["One", "Two", "Three", "Four", "Five", "Six"];
 
 const Dice = () => {
   const [rolling, setRolling] = useState(false);
@@ -10,17 +10,25 @@ const Dice = () => {
   const rollDice = () => {
     if (!rolling) {
       setRolling(true);
-      setSide((side + 1) % sides.length)
+      setSide((prevSide) => (prevSide + 1) % sides.length);
       setTimeout(() => {
         setRolling(false);
       }, 2000);
     }
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      rollDice();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [rolling]);
+
   const diceClassname = `dice-${side}`;
   return (
-    <div className="dice-container" onClick={rollDice}>
-      <div className={`dice ${diceClassname} ${rolling ? 'rolling' : ''}`}>
+    <div className="dice-container">
+      <div className={`dice ${diceClassname} ${rolling ? "rolling" : ""}`}>
         <div className="side front">{sides[0]}</div>
         <div className="side back">{sides[1]}</div>
         <div className="side right">{sides[2]}</div>
