@@ -81,17 +81,28 @@ const Dice = () => {
   const [rolling, setRolling] = useState(false);
   const [side, setSide] = useState(0);
 
+//   const rollDice = () => {
+//     if (!rolling) {
+//       setRolling(true);
+//       setTimeout(() => {
+//         const randomIndex = Math.floor(Math.random() * sides.length);
+//         setResult(sides[randomIndex]);
+//         setRolling(false);
+//       }, 2000);
+//     }
+//   };
+
   const rollDice = () => {
     if (!rolling) {
       setRolling(true);
+      setSide(side + 1 % sides.length)
       setTimeout(() => {
-        const randomIndex = Math.floor(Math.random() * sides.length);
-        setResult(sides[randomIndex]);
         setRolling(false);
       }, 2000);
     }
   };
 
+  console.log("current side: ", side);
   const diceClassname = `dice-${side}`;
 
   return (
