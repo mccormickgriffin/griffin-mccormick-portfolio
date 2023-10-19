@@ -1,9 +1,11 @@
 import "styles/AboutMe.scss";
 import { SECTION_IDS } from "lib/consts";
+import Dice from "./Dice";
 
 function AboutMe() {
   return (
     <section id={SECTION_IDS.ABOUT_ME}>
+      <Dice />
       <h1>
         Hi! My name is Griffin and I am a full stack web developer.
       </h1>
