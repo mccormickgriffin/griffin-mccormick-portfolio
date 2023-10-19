@@ -25,7 +25,7 @@
 
 .dice-0 {
   transition: transform 2s;
-  transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   &.rolling {
     animation: roll-0 2s;
   }
@@ -65,7 +65,7 @@
 
 .dice-5 {
   transition: transform 2s;
-  transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+  transform: rotateX(270deg) rotateY(180deg) rotateZ(180deg);
   &.rolling {
     animation: roll-5 2s;
   }
@@ -73,7 +73,7 @@
 
 @keyframes roll-0 {
   0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(270deg) rotateY(180deg) rotateZ(180deg);
   }
   100% {
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
@@ -118,10 +118,10 @@
 
 @keyframes roll-5 {
   0% {
-    transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+    transform: rotateX(270deg) rotateY(360deg) rotateZ(360deg);
   }
   100% {
-    transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+    transform: rotateX(270deg) rotateY(180deg) rotateZ(180deg)
   }
 }
 
