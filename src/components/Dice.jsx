@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "styles/Dice.scss";
 
-const sides = ["One", "Two", "Three", "Four", "Five", "Six"];
+const sides = ["Developer", "Designer", "Dreamer", "Engineer", "Gamer", "Thinker"];
 
 const Dice = () => {
   const [rolling, setRolling] = useState(false);
