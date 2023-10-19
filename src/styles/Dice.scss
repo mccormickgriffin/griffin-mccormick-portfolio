@@ -41,7 +41,7 @@
 
 .dice-2 {
   transition: transform 2s;
-  transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+  transform: rotateX(360deg) rotateY(270deg) rotateZ(360deg);
   &.rolling {
     animation: roll-2 2s;
   }
@@ -89,12 +89,12 @@
   }
 }
 
-@keyframes roll-1 {
+@keyframes roll-2 {
   0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
   }
   100% {
-    transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+    transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
   }
 }
 
