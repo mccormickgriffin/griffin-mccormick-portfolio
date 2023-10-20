@@ -10,7 +10,10 @@ function AboutMe() {
       </div>
       <div className="about-me-right">
         <div>
-          <h1>Hi! My name is Griffin and I am a full stack web developer.</h1>
+          <h1>Hi! My name is Griffin,</h1>
+          <h2>
+            and I am a <span className="highlight">Full Stack Web Developer</span>.
+          </h2>
           <p>
             I love all things technology from developing web and mobile
             application to playing video games. I have always been passionate
