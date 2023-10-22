@@ -7,6 +7,7 @@ const jobs = [
     location: "Ann Arbor, MI",
     startDate: "February 2020",
     endDate: "Present",
+    technologies: ["React", "Ruby on Rails", "Redux", "Postgres", "AWS"],
     positions: [
       {
         title: "Software Engineer",
@@ -36,6 +37,7 @@ const jobs = [
     location: "Ann Arbor, MI",
     startDate: "June 2018",
     endDate: "September 2019",
+    technologies: ["Angular", ".Net", "Ember", "Express", "MongoDB"],
     positions: [
       {
         title: "Software Developer",
@@ -78,6 +80,9 @@ function Experience() {
                 </ul>
               </div>
             );
+          })}
+          {job.technologies.map((tech) => {
+            return <span>{tech}</span>;
           })}
         </div>
       );
