@@ -7,18 +7,15 @@ const jobs = [
     location: "Ann Arbor, MI",
     startDate: "February 2020",
     endDate: "Present",
-    technologies: ["React", "Ruby on Rails", "Redux", "Postgres", "AWS"],
+    technologies: [
+      "React",
+      "Ruby on Rails",
+      "Redux",
+      "Postgres",
+      "Docker",
+      "AWS",
+    ],
     positions: [
-      {
-        title: "Software Engineer",
-        startDate: "Feb 2020",
-        endDate: "Jan 2022",
-        bullets: [
-          "Built frontend and backend functionality for the application using the React, Redux, and Ruby on Rails frameworks to provide 150+ customers and 100,000+ users with a consistently improving experience",
-          "Designed and architected application changes involving migrations on PostgreSQL databases and expanding the existing RESTful API, resulting in seamless schema transitions and a more robust API infrastructure",
-          "Championed frontend development, leveraging React and Redux to create intuitive user interfaces and increase engagement Implemented responsive design principles, ensuring optimal performance across various devices and screen sizes",
-        ],
-      },
       {
         title: "Lead Software Engineer",
         startDate: "Jan 2022",
@@ -30,6 +27,16 @@ const jobs = [
           "Served as the Technical Lead, responsible for making critical technical decisions, overseeing project architecture, and successfully integrating new team members",
         ],
       },
+      {
+        title: "Software Engineer",
+        startDate: "Feb 2020",
+        endDate: "Jan 2022",
+        bullets: [
+          "Built frontend and backend functionality for the application using the React, Redux, and Ruby on Rails frameworks to provide 150+ customers and 100,000+ users with a consistently improving experience",
+          "Designed and architected application changes involving migrations on PostgreSQL databases and expanding the existing RESTful API, resulting in seamless schema transitions and a more robust API infrastructure",
+          "Championed frontend development, leveraging React and Redux to create intuitive user interfaces and increase engagement Implemented responsive design principles, ensuring optimal performance across various devices and screen sizes",
+        ],
+      },
     ],
   },
   {
@@ -37,7 +44,7 @@ const jobs = [
     location: "Ann Arbor, MI",
     startDate: "June 2018",
     endDate: "September 2019",
-    technologies: ["Angular", ".Net", "Ember", "Express", "MongoDB"],
+    technologies: ["Angular", ".Net", "Flask", "Express", "MongoDB"],
     positions: [
       {
         title: "Software Developer",
@@ -57,33 +64,38 @@ function Experience() {
   const jobSection = () => {
     return jobs.map((job) => {
       return (
-        <div>
-          <div>
-            {job.company} | {job.location}
+        <div className="job-container">
+          <div className="job-timespan-container">
+            <div>{job.endDate}</div>
+            <div className="vertical-line">|</div>
+            <div>{job.startDate}</div>
           </div>
           <div>
-            {job.startDate} - {job.endDate}
+            <span className="company">{job.company}</span>
+            <span>{job.location}</span>
+            {job.positions.map((position) => {
+              return (
+                <div className="position-container">
+                  <span className="position-title">{position.title}</span>
+                  {position.startDate && position.endDate && (
+                    <div className="position-timespan-container">
+                      {position.startDate} - {position.endDate}
+                    </div>
+                  )}
+                  <ul>
+                    {position.bullets.map((bullet) => {
+                      return <li>{bullet}</li>;
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
+            <div className="technologies">
+              {job.technologies.map((tech) => {
+                return <div className="technology">{tech}</div>;
+              })}
+            </div>
           </div>
-          {job.positions.map((position) => {
-            return (
-              <div>
-                <span>{position.title}</span>
-                {position.startDate && position.endDate && (
-                  <span>
-                    &nbsp;({position.startDate} - {position.endDate})
-                  </span>
-                )}
-                <ul>
-                  {position.bullets.map((bullet) => {
-                    return <li>{bullet}</li>;
-                  })}
-                </ul>
-              </div>
-            );
-          })}
-          {job.technologies.map((tech) => {
-            return <span>{tech}</span>;
-          })}
         </div>
       );
     });
@@ -91,6 +103,8 @@ function Experience() {
 
   return (
     <section id={SECTION_IDS.EXPERIENCE}>
+      <h1>Experience</h1>
+
       {jobSection()}
 
       <div>
