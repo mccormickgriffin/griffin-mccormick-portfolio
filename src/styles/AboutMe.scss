@@ -16,7 +16,6 @@
     display: flex;
     align-items: center;
 
-
     h1, h2 {
         margin: 0;
     }
@@ -28,5 +27,9 @@
     .highlight {
         color: $primary;
     }
+}
+
+.bio {
+    color: $secondary;
 }
 
