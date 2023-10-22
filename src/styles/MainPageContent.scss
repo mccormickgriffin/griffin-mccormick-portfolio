@@ -1,5 +1,5 @@
 @import "spacing";
 
 section {
-  height: calc(100vh - #{$top-nav-height});
+  min-height: calc(100vh - #{$top-nav-height});
 }
