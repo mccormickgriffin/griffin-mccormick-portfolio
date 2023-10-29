@@ -18,8 +18,14 @@ const projects = [
   {
     name: "Anniversaries",
     description:
-      "Helping AA sponsors keep track of sobriety coins and duration",
+      "Mobile app helping AA sponsors keep track of sobriety coins and duration",
     technologies: ["Flutter", "Express.js", "Postgres", "Docker", "Firebase"],
+  },
+  {
+    name: "Mail Sending Server",
+    description:
+      "Stand alone server to help send emails with feedback messages from many applications",
+    technologies: ["Express.js", "AWS", "Microservice", "NodeMailer"],
   },
 ];
 
