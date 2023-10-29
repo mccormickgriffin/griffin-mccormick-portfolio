@@ -1,0 +1,6 @@
+@import "spacing";
+
+.projects-container {
+    display: flex;
+    gap: $padding-medium;
+}
