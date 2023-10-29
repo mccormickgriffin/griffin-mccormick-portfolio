@@ -62,9 +62,9 @@ const jobs = [
 
 function Experience() {
   const jobSection = () => {
-    return jobs.map((job) => {
+    return jobs.map((job, jobIndex) => {
       return (
-        <div className="job-container">
+        <div className="job-container" key={jobIndex}>
           <div className="job-timespan-container">
             <div>{job.endDate}</div>
             <div className="vertical-line">|</div>
@@ -73,9 +73,9 @@ function Experience() {
           <div>
             <span className="company">{job.company}</span>
             <span>{job.location}</span>
-            {job.positions.map((position) => {
+            {job.positions.map((position, positionIndex) => {
               return (
-                <div className="position-container">
+                <div className="position-container" key={positionIndex}>
                   <span className="position-title">{position.title}</span>
                   {position.startDate && position.endDate && (
                     <div className="position-timespan-container">
@@ -83,16 +83,16 @@ function Experience() {
                     </div>
                   )}
                   <ul>
-                    {position.bullets.map((bullet) => {
-                      return <li>{bullet}</li>;
+                    {position.bullets.map((bullet, bulletIndex) => {
+                      return <li key={bulletIndex}>{bullet}</li>;
                     })}
                   </ul>
                 </div>
               );
             })}
             <div className="technologies">
-              {job.technologies.map((tech) => {
-                return <div className="technology">{tech}</div>;
+              {job.technologies.map((tech, techIndex) => {
+                return <div className="technology" key={techIndex}>{tech}</div>;
               })}
             </div>
           </div>
