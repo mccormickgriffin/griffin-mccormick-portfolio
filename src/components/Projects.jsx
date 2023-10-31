@@ -26,17 +26,19 @@ const projects = [
     description:
       "Stand alone server to help send emails with feedback messages from many applications",
     technologies: ["Express.js", "AWS", "Microservice", "NodeMailer"],
-  },
+  }
 ];
 
 function Projects() {
   return (
     <section id={SECTION_IDS.PROJECTS}>
       <h1>Projects</h1>
-      <div className="projects-container">
-        {projects.map((project) => (
-          <ProjectCard key={project.name} {...project} />
-        ))}
+      <div className="fade-to-background">
+        <div className="projects-container">
+          {projects.map((project) => (
+            <ProjectCard key={project.name} {...project} />
+          ))}
+        </div>
       </div>
     </section>
   );

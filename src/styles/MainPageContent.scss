@@ -2,4 +2,9 @@
 
 section {
   min-height: calc(100vh - #{$top-nav-height});
+  overflow: hidden;
+}
+
+.main-page-content {
+  width: 100%;
 }
