@@ -15,3 +15,16 @@ body {
 section {
   padding: 64px;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: $secondary; 
+  border-radius: 12px;
+}
