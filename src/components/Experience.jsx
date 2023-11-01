@@ -52,7 +52,7 @@ const jobs = [
           "Developed software for multiple clients in a variety of domains using different technology stacks, gaining familiarity with several languages like C#, Python, and JavaScript",
           "Led “Show and Tell” meetings with project stakeholders to keep them up to date with the team’s progress",
           "Advocated in both long- and short-term resource and project planning to ensure teams were properly allocated for projects to meet goals set by the clients",
-          "Programmed using test driven development principles in a variety of frameworks including Angular, Ember, and .Net to assure code quality and maintainability",
+          "Programmed using test driven development principles in a variety of frameworks including Angular, Flask, and .Net to assure code quality and maintainability",
           "Used pair programming with other developers to both learn and teach programming paradigms and best practices",
         ],
       },
@@ -92,7 +92,11 @@ function Experience() {
             })}
             <div className="technologies">
               {job.technologies.map((tech, techIndex) => {
-                return <div className="technology" key={techIndex}>{tech}</div>;
+                return (
+                  <div className="technology" key={techIndex}>
+                    {tech}
+                  </div>
+                );
               })}
             </div>
           </div>

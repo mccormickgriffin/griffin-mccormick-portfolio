@@ -2,8 +2,8 @@
 @import "spacing";
 
 .project-card {
-    min-width: 300px;
-    width: 300px;
+    min-width: $project-card-width;
+    width: $project-card-width;
     height: 500px;
     border-radius: 8px;
     border: 1px solid rgba($color: $primary, $alpha: .1);
