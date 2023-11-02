@@ -11,18 +11,6 @@ $diceSize: 300px;
   justify-content: center;
 }
 
-.side {
-  position: absolute;
-  width: $diceSize;
-  height: $diceSize;
-  border: 1px solid #1f1f1f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  background: linear-gradient(222deg, $background, #1f1f1f, $background);
-}
-
 .dice {
   position: relative;
   width: $diceSize;
@@ -32,6 +20,42 @@ $diceSize: 300px;
 
   &:hover {
     cursor: default;
+  }
+
+  .side {
+    position: absolute;
+    width: $diceSize;
+    height: $diceSize;
+    border: 1px solid #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: linear-gradient(222deg, $background, #1f1f1f, $background);
+
+    &.front {
+      transform: rotateY(0deg) translateZ(calc(#{$diceSize} / 2));
+    }
+
+    &.back {
+      transform: rotateY(180deg) translateZ(calc(#{$diceSize} / 2));
+    }
+
+    &.right {
+      transform: rotateY(90deg) translateZ(calc(#{$diceSize} / 2));
+    }
+
+    &.left {
+      transform: rotateY(-90deg) translateZ(calc(#{$diceSize} / 2));
+    }
+
+    &.top {
+      transform: rotateX(90deg) translateZ(calc(#{$diceSize} / 2));
+    }
+
+    &.bottom {
+      transform: rotateX(-90deg) translateZ(calc(#{$diceSize} / 2));
+    }
   }
 }
 
@@ -133,30 +157,6 @@ $diceSize: 300px;
     transform: rotateX(270deg) rotateY(360deg) rotateZ(360deg);
   }
   100% {
-    transform: rotateX(270deg) rotateY(180deg) rotateZ(180deg)
+    transform: rotateX(270deg) rotateY(180deg) rotateZ(180deg);
   }
-}
-
-.front {
-  transform: rotateY(0deg) translateZ(calc(#{$diceSize} / 2));
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(calc(#{$diceSize} / 2));
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(calc(#{$diceSize} / 2));
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(calc(#{$diceSize} / 2));
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(calc(#{$diceSize} / 2));
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(calc(#{$diceSize} / 2));
 }
