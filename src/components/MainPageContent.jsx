@@ -1,8 +1,8 @@
 import "styles/MainPageContent.scss";
 import AboutMe from "./AboutMe";
 import Experience from "./Experience";
-import Projects from "./Projects";
 import Contact from "./Contact";
+import Projects from "./Projects/Projects";
 
 function MainPageContent() {
   return (
