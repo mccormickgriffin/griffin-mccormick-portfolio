@@ -1,11 +1,17 @@
 import "styles/MainPage.scss";
-import MainPageContent from "components/MainPageContent";
+import AboutMe from "./AboutMe";
+import Experience from "./Experience";
+import Projects from "./Projects/Projects";
+import Contact from "./Contact";
 
 function MainPage() {
   return (
-    <div className="main-page">
-      <MainPageContent/>
-    </div>
+    <main className="main-page">
+      <AboutMe />
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
   );
 }
 

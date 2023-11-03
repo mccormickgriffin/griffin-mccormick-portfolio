@@ -1,6 +1,11 @@
 @import "spacing";
 
 .main-page {
-    display: flex;
-    padding: $top-nav-height 0;
+  width: 100%;
+  padding: $top-nav-height 0;
+}
+
+section {
+  min-height: calc(100vh - #{$top-nav-height});
+  overflow: hidden;
 }
