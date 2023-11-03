@@ -1,6 +1,7 @@
 import "styles/Projects.scss";
 import { SECTION_IDS } from "lib/consts";
 import ProjectCard from "./ProjectCard";
+import ProjectTrack from "./ProjectTrack";
 
 const projects = [
   {
@@ -26,20 +27,22 @@ const projects = [
     description:
       "Stand alone server to help send emails with feedback messages from many applications",
     technologies: ["Express.js", "AWS", "Microservice", "NodeMailer"],
-  }
+  },
 ];
 
 function Projects() {
   return (
     <section id={SECTION_IDS.PROJECTS}>
       <h1>Projects</h1>
-      <div className="fade-to-background">
-        <div className="projects-container">
-          {projects.map((project) => (
-            <ProjectCard key={project.name} {...project} />
-          ))}
+      <ProjectTrack>
+        <div className="fade-to-background">
+          <div className="projects-container">
+            {projects.map((project) => (
+              <ProjectCard key={project.name} {...project} />
+            ))}
+          </div>
         </div>
-      </div>
+      </ProjectTrack>
     </section>
   );
 }
