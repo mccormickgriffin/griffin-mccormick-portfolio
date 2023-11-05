@@ -39,7 +39,7 @@ function ProjectTrack(props) {
   
     return (
       <div
-        id="image-track"
+        id="project-track"
         ref={trackRef}
         onMouseDown={handleMouseDown}
         onTouchStart={e => handleMouseDown(e.touches[0])}
