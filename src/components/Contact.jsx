@@ -6,7 +6,13 @@ function Contact() {
   return (
     <section id={SECTION_IDS.CONTACT}>
       <h1>Contact</h1>
-      <ContactForm />
+      <div className="contact-section-content">
+        <div>
+          <p>Want to make something amazing?</p>
+          <p>Let's solve a problem, build an app, change the world.</p>
+        </div>
+        <ContactForm />
+      </div>
     </section>
   );
 }
