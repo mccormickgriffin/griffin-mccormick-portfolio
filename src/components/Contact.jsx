@@ -7,9 +7,9 @@ function Contact() {
     <section id={SECTION_IDS.CONTACT}>
       <h1>Contact</h1>
       <div className="contact-section-content">
-        <div>
-          <p>Want to make something amazing?</p>
-          <p>Let's solve a problem, build an app, change the world.</p>
+        <div className="contact-prompt">
+          <p>Want to make something <b>amazing</b>?</p>
+          <p>Let's solve a problem, build an app, <b>change the world</b>.</p>
         </div>
         <ContactForm />
       </div>

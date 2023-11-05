@@ -2,9 +2,20 @@
 @import "spacing";
 
 .contact-form {
+    flex-grow: 1;;
     border-radius: 8px;
     border: 1px solid rgba($color: $primary, $alpha: .1);
     background-color: rgba($primary, .05);
     padding: $padding-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    textarea {
+        resize: none;
+
+        // TO DO: add custom scrollbar 
+    }
 
 }

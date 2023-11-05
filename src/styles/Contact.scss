@@ -1,0 +1,29 @@
+@import "spacing";
+@import "colors";
+
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section-content {
+  flex-grow: 1;
+  display: flex;
+  gap: $padding-large;
+}
+
+.contact-prompt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p:first-child {
+    font-size: xx-large;
+  }
+  p:last-child {
+    color: $secondary;
+    b {
+      color: $text;
+    }
+  }
+}

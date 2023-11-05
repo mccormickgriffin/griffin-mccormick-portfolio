@@ -42,7 +42,7 @@ const ContactForm = () => {
       <div>
         <label>
           Message:
-          <textarea value={message} onChange={handleMessageChange} />
+          <textarea rows={5} value={message} onChange={handleMessageChange} />
         </label>
       </div>
       <button type="submit">Submit</button>
