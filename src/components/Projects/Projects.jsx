@@ -7,11 +7,13 @@ function Projects() {
   return (
     <section id={SECTION_IDS.PROJECTS}>
       <h1>Projects</h1>
-      <ProjectTrack>
-        <div className="fade-to-background">
-          <ProjectCards />
-        </div>
-      </ProjectTrack>
+      <div className="project-section-content">
+        <ProjectTrack>
+          <div className="fade-to-background">
+            <ProjectCards />
+          </div>
+        </ProjectTrack>
+      </div>
     </section>
   );
 }

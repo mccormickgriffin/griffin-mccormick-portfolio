@@ -1,6 +1,17 @@
 @import "colors";
 @import "spacing";
 
+#projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-section-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
 .fade-to-background {
   position: relative;
   width: 100%;
