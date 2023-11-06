@@ -8,7 +8,7 @@ function Contact() {
       <h1>Contact</h1>
       <div className="contact-section-content">
         <div className="contact-prompt">
-          <p>Want to make something <b>amazing</b>?</p>
+          <p>Want to make something <b className="highlight">amazing</b>?</p>
           <p>Let's solve a problem, build an app, <b>change the world</b>.</p>
         </div>
         <ContactForm />
