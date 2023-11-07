@@ -9,13 +9,30 @@
     padding: $padding-large;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: auto;
+    color: $secondary;
+
+    .form-input-container {
+        width: 100%;
+        margin-bottom: $padding-medium;
+    }
+
+    input {
+        width: 100%;
+        height: 2rem;
+    }
 
 
     textarea {
+        width: 100%;
         resize: none;
 
         // TO DO: add custom scrollbar 
+    }
+
+    button {
+        margin: auto;
+        width: auto;
     }
 
 }

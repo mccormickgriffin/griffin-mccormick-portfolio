@@ -27,22 +27,22 @@ const ContactForm = () => {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <div>
+      <div className="form-input-container">
         <label>
           Name:
           <input type="text" value={name} onChange={handleNameChange} />
         </label>
       </div>
-      <div>
+      <div className="form-input-container">
         <label>
           Email:
           <input type="email" value={email} onChange={handleEmailChange} />
         </label>
       </div>
-      <div>
+      <div className="form-input-container">
         <label>
           Message:
-          <textarea rows={5} value={message} onChange={handleMessageChange} />
+          <textarea rows={8} value={message} onChange={handleMessageChange} />
         </label>
       </div>
       <button type="submit">Submit</button>
