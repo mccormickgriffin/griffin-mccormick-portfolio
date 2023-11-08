@@ -2,10 +2,12 @@
 
 .main-page {
   width: 100%;
-  padding: $top-nav-height 0;
+  padding-top: $top-nav-height;
 }
 
 section {
+  padding: 0 $padding-large;
+  margin-bottom: $padding-large;
   min-height: calc(100vh - #{$top-nav-height});
   overflow: hidden;
 }
