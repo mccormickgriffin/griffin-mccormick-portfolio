@@ -1,6 +1,6 @@
 import "styles/MainPage.scss";
 import AboutMe from "./AboutMe";
-import Experience from "./Experience";
+import Experience from "./Experience/Experience";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact";
 

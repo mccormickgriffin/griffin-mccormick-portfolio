@@ -1,0 +1,13 @@
+@import "colors";
+@import "spacing";
+
+.company {
+    font-size: x-large;
+    color: $text;
+    font-weight: bold;
+    margin-right: $padding-standard;
+}
+
+.position-title {
+    font-weight: bold;
+}

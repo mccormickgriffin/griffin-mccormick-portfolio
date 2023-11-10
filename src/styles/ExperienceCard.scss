@@ -1,0 +1,41 @@
+@import "colors";
+@import "spacing";
+
+.experience-card {
+    position: relative;
+    gap: $padding-medium;
+    padding: $padding-medium 48px;
+    margin-bottom: $padding-medium;
+    border-radius: 8px;
+    border: 1px solid rgba($color: $primary, $alpha: .1);
+    background-color: rgba($primary, .05);
+    color: $secondary;
+    line-height: 1.3em;
+
+    cursor: pointer;
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 500ms;
+
+        
+
+        background: radial-gradient(
+            800px circle at var(--mouse-x) var(--mouse-y),
+            rgba($text, 0.06),
+            transparent 40%
+        );
+    }
+}
