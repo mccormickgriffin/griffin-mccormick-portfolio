@@ -7,8 +7,7 @@
 }
 
 section {
-  padding: 0 $padding-large;
-  margin-bottom: $padding-large;
+  margin: 0 $padding-large $padding-large $padding-large;
   min-height: calc(100vh - #{$top-nav-height});
   overflow: hidden;
 }
