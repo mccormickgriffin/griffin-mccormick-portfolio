@@ -15,7 +15,8 @@ function ExperienceCard(props) {
 
   return (
     <div onMouseMove={handleMouseMove} className="experience-card">
-      {props.children}
+      <div className="experience-card-border"></div>
+      <div className="experience-card-content">{props.children}</div>
     </div>
   );
 }

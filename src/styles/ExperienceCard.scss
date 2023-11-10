@@ -1,41 +1,63 @@
 @import "colors";
 @import "spacing";
 
+#experience-accordian:hover {
+  .experience-card-border {
+    opacity: 1;
+  }
+}
+
 .experience-card {
-    position: relative;
-    gap: $padding-medium;
-    padding: $padding-medium 48px;
-    margin-bottom: $padding-medium;
-    border-radius: 8px;
-    border: 1px solid rgba($color: $primary, $alpha: .1);
-    background-color: rgba($primary, .05);
-    color: $secondary;
-    line-height: 1.3em;
+  position: relative;
+  display: flex;
+  border-radius: 8px;
+  background-color: rgba($primary, 0.15);
+  color: $secondary;
+  line-height: 1.3em;
+  cursor: pointer;
 
-    cursor: pointer;
+  &:hover::before {
+    opacity: 1;
+  }
 
-    &:hover::before {
-        opacity: 1;
-    }
+  .experience-card-border,
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 500ms;
+  }
 
-    &::before {
-        content: "";
-        position: absolute;
-        border-radius: inherit;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: 2;
-        opacity: 0;
-        transition: opacity 500ms;
+  &::before {
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y),
+      rgba($text, 0.03),
+      transparent 60%
+    );
+    z-index: 3;
+  }
 
-        
+  .experience-card-border {
+    background: radial-gradient(
+      400px circle at var(--mouse-x) var(--mouse-y),
+      rgba($text, .15),
+      transparent 40%
+    );
+    z-index: 1;
+  }
+}
 
-        background: radial-gradient(
-            800px circle at var(--mouse-x) var(--mouse-y),
-            rgba($text, 0.06),
-            transparent 40%
-        );
-    }
+.experience-card-content {
+  position: relative;
+  background-color: $card-background;
+  padding: $padding-medium 48px;
+  border-radius: inherit;
+  margin: 1px;
+  flex-grow: 1;
+  z-index: 2;
 }

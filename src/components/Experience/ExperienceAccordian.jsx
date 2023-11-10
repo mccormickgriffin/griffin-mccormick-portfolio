@@ -103,27 +103,31 @@ const jobs = [
 ];
 
 function ExperienceAccordian() {
-  return jobs.map((job, jobIndex) => {
-    return (
-      <ExperienceCard key={jobIndex}>
-        <span className="company">{job.company}</span>
-        <span>{job.location}</span>
-        <div className="position-title">{job.title}</div>
-        <div className="position-timespan-container">
-          {job.startDate} - {job.endDate}
-        </div>
-        <div className="technologies">
-          {job.technologies.map((tech, techIndex) => {
-            return (
-              <div className="technology" key={techIndex}>
-                {tech}
-              </div>
-            );
-          })}
-        </div>
-      </ExperienceCard>
-    );
-  });
+  return (
+    <div id="experience-accordian">
+      {jobs.map((job, jobIndex) => {
+        return (
+          <ExperienceCard key={jobIndex}>
+            <span className="company">{job.company}</span>
+            <span>{job.location}</span>
+            <div className="position-title">{job.title}</div>
+            <div className="position-timespan-container">
+              {job.startDate} - {job.endDate}
+            </div>
+            <div className="technologies">
+              {job.technologies.map((tech, techIndex) => {
+                return (
+                  <div className="technology" key={techIndex}>
+                    {tech}
+                  </div>
+                );
+              })}
+            </div>
+          </ExperienceCard>
+        );
+      })}
+    </div>
+  );
 }
 
 export default ExperienceAccordian;

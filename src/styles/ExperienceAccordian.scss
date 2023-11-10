@@ -1,6 +1,12 @@
 @import "colors";
 @import "spacing";
 
+#experience-accordian {
+    display: flex;
+    flex-direction: column;
+    gap: $padding-standard;
+}
+
 .company {
     font-size: x-large;
     color: $text;
