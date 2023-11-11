@@ -11,7 +11,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 0 $padding-large;
-  z-index: 1;
+  z-index: 99;
   background-image: linear-gradient(to right, transparent, $text, transparent);
   background-size: 100% 1px;
   background-position: 0 100%;
