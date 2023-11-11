@@ -60,4 +60,14 @@
   margin: 1px;
   flex-grow: 1;
   z-index: 2;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  &.expanded {
+    max-height: 275px;
+  }
+
+  &.collapsed {
+    max-height: 110px;
+  }
 }

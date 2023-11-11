@@ -14,9 +14,20 @@ function ExperienceCard(props) {
   }
 
   return (
-    <div onMouseMove={handleMouseMove} className="experience-card">
+    <div
+      onClick={props.clickHandler}
+      onMouseMove={handleMouseMove}
+      className="experience-card"
+    >
       <div className="experience-card-border"></div>
-      <div className="experience-card-content">{props.children}</div>
+      <div
+        className={`experience-card-content ${
+          props.expanded ? "expanded" : "collapsed"
+        }`}
+      >
+        {props.preview}
+        {props.expandedContent}
+      </div>
     </div>
   );
 }
