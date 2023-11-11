@@ -1,6 +1,6 @@
 import "styles/Experience.scss";
 import { SECTION_IDS } from "lib/consts";
-import ExperienceAccordian from "./ExperienceAccordian";
+import ExperienceAccordian from "./ExperienceAccordion";
 
 function Experience() {
   return (

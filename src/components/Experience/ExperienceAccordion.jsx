@@ -1,6 +1,6 @@
-import "styles/ExperienceAccordian.scss";
-import { useState } from "react";
+import "styles/ExperienceAccordion.scss";
 import ExperienceCard from "./ExperienceCard";
+import ExperienceCardPreview from "./ExperienceCardPreview";
 
 // const jobs = [
 //   {
@@ -108,21 +108,7 @@ function ExperienceAccordian() {
       {jobs.map((job, jobIndex) => {
         return (
           <ExperienceCard key={jobIndex}>
-            <span className="company">{job.company}</span>
-            <span>{job.location}</span>
-            <div className="position-title">{job.title}</div>
-            <div className="position-timespan-container">
-              {job.startDate} - {job.endDate}
-            </div>
-            <div className="technologies">
-              {job.technologies.map((tech, techIndex) => {
-                return (
-                  <div className="technology" key={techIndex}>
-                    {tech}
-                  </div>
-                );
-              })}
-            </div>
+            <ExperienceCardPreview {...job} />
           </ExperienceCard>
         );
       })}
