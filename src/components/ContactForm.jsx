@@ -3,7 +3,7 @@ import "styles/ContactForm.scss";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleNameChange = (event) => {
@@ -11,18 +11,44 @@ const ContactForm = () => {
   };
 
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+    setSenderEmail(event.target.value);
   };
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+    
+    try {
+      const formData = {
+        name,
+        senderEmail,
+        message,
+      };
+      const response = await fetch(
+        process.env.REACT_APP_MAIL_SENDER_URL,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        // TODO: Successful submission logic
+        console.log("Form submitted successfully!");
+      } else {
+        // TODO: Handle error cases
+        console.error("Form submission failed.");
+      }
+    } catch (error) {
+      // TODO: Handle error cases
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
@@ -36,7 +62,11 @@ const ContactForm = () => {
       <div className="form-input-container">
         <label>
           Email:
-          <input type="email" value={email} onChange={handleEmailChange} />
+          <input
+            type="email"
+            value={senderEmail}
+            onChange={handleEmailChange}
+          />
         </label>
       </div>
       <div className="form-input-container">
