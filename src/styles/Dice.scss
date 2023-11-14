@@ -31,29 +31,37 @@ $diceSize: 300px;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    background: linear-gradient(222deg, $background, #1f1f1f, $background);
+    // background: linear-gradient(222deg, $background, #1f1f1f, $background);
+    background-size: cover;
 
     &.front {
+      background-image: (url('../../public/images/vg1.jpg'));
       transform: rotateY(0deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.back {
+      background-image: (url('../../public/images/vg2.jpg'));
       transform: rotateY(180deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.right {
+      background-image: (url('../../public/images/vg3.jpg'));
+
       transform: rotateY(90deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.left {
+      background-image: (url('../../public/images/vg4.jpg'));
       transform: rotateY(-90deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.top {
+      background-image: (url('../../public/images/vg1.jpg'));
       transform: rotateX(90deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.bottom {
+      background-image: (url('../../public/images/vg1.jpg'));
       transform: rotateX(-90deg) translateZ(calc(#{$diceSize} / 2));
     }
   }

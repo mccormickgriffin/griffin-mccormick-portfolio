@@ -23,13 +23,15 @@ const Dice = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [rolling]);
+  }, [rolling, rollDice]);
 
   const diceClassname = `dice-${side}`;
   return (
     <div className="dice-container">
       <div className={`dice ${diceClassname} ${rolling ? "rolling" : ""}`}>
-        <div className="side front">{sides[0]}</div>
+        <div className="side front">
+          {sides[0]}
+          </div>
         <div className="side back">{sides[1]}</div>
         <div className="side right">{sides[2]}</div>
         <div className="side left">{sides[3]}</div>
