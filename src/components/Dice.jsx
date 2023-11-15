@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import "styles/Dice.scss";
 
-const sides = ["Developer", "Dreamer", "Engineer", "Humanitarian", "Gamer", "Problem Solver"];
+const sides = [
+  "Developer",
+  "Dreamer",
+  "Engineer",
+  "Humanitarian",
+  "Gamer",
+  "Problem Solver",
+];
 
 const Dice = () => {
   const [rolling, setRolling] = useState(false);
@@ -29,9 +36,7 @@ const Dice = () => {
   return (
     <div className="dice-container">
       <div className={`dice ${diceClassname} ${rolling ? "rolling" : ""}`}>
-        <div className="side front">
-          {sides[0]}
-          </div>
+        <div className="side front">{sides[0]}</div>
         <div className="side back">{sides[1]}</div>
         <div className="side right">{sides[2]}</div>
         <div className="side left">{sides[3]}</div>

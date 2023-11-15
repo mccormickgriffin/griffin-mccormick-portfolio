@@ -35,33 +35,32 @@ $diceSize: 300px;
     background-size: cover;
 
     &.front {
-      background-image: (url('../../public/images/vg1.jpg'));
+      background-image: (url('../../public/images/developer.jpg'));
       transform: rotateY(0deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.back {
-      background-image: (url('../../public/images/vg2.jpg'));
+      background-image: (url('../../public/images/dreamer.jpg'));
       transform: rotateY(180deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.right {
-      background-image: (url('../../public/images/vg3.jpg'));
-
+      background-image: (url('../../public/images/engineer.jpg'));
       transform: rotateY(90deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.left {
-      background-image: (url('../../public/images/vg4.jpg'));
+      background-image: (url('../../public/images/humanitarian.jpg'));
       transform: rotateY(-90deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.top {
-      background-image: (url('../../public/images/vg1.jpg'));
+      background-image: (url('../../public/images/gamer.jpg'));
       transform: rotateX(90deg) translateZ(calc(#{$diceSize} / 2));
     }
 
     &.bottom {
-      background-image: (url('../../public/images/vg1.jpg'));
+      background-image: (url('../../public/images/problem_solver.png'));
       transform: rotateX(-90deg) translateZ(calc(#{$diceSize} / 2));
     }
   }
