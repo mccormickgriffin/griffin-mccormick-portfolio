@@ -36,7 +36,7 @@ function ProjectTrack(props) {
         image.style.objectPosition = `${100 + nextPercentage}% center`;
       }
     };
-  
+
     return (
       <div
         id="project-track"

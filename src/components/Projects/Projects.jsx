@@ -8,11 +8,11 @@ function Projects() {
     <section id={SECTION_IDS.PROJECTS}>
       <h1>Projects</h1>
       <div className="project-section-content">
-        <ProjectTrack>
-          <div className="fade-to-background">
+        {/* <div className="fade-to-background"> */}
+          <ProjectTrack>
             <ProjectCards />
-          </div>
-        </ProjectTrack>
+          </ProjectTrack>
+        {/* </div> */}
       </div>
     </section>
   );
