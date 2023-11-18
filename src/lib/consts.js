@@ -14,6 +14,16 @@ export const NAV_ITEMS = [
 
 export const PROJECTS = [
   {
+    name: "This Portfolio",
+    description: "What you are looking at right now - a place to show off some of my skills practice new techniques",
+    technologies: [
+      "React",
+      "HTML",
+      "SCSS",
+      "AWS",
+    ],
+  },
+  {
     name: "Axol Music",
     description: "App to automate playlist customization",
     technologies: [
@@ -30,6 +40,12 @@ export const PROJECTS = [
     description:
       "Mobile app helping AA sponsors keep track of sobriety coins and duration",
     technologies: ["Flutter", "Express.js", "Postgres", "Docker", "Firebase"],
+  },
+  {
+    name: "AiRT COLLECTION",
+    description:
+      "Gallery of AI created art organized by category and source",
+    technologies: ["Next.js", "Tailwind", "Typescript", "AWS"],
   },
   {
     name: "Mail Sending Server",
