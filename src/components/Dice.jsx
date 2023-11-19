@@ -36,12 +36,30 @@ const Dice = () => {
   return (
     <div className="dice-container">
       <div className={`dice ${diceClassname} ${rolling ? "rolling" : ""}`}>
-        <div className="side front">{sides[0]}</div>
-        <div className="side back">{sides[1]}</div>
-        <div className="side right">{sides[2]}</div>
-        <div className="side left">{sides[3]}</div>
-        <div className="side top">{sides[4]}</div>
-        <div className="side bottom">{sides[5]}</div>
+        <div className="side front">
+          <img src="images/developer.jpg" alt="" />
+          <p>{sides[0]}</p>
+        </div>
+        <div className="side back">
+          <img src="images/dreamer.jpg" alt="" />
+          <p>{sides[1]}</p>
+        </div>
+        <div className="side right">
+          <img src="images/engineer.jpg" alt="" />
+          <p>{sides[2]}</p>
+        </div>
+        <div className="side left">
+          <img src="images/humanitarian.jpg" alt="" />
+          <p>{sides[3]}</p>
+        </div>
+        <div className="side top">
+          <img src="images/gamer.jpg" alt="" />
+          <p>{sides[4]}</p>
+        </div>
+        <div className="side bottom">
+          <img src="images/problem_solver.png" alt="" />
+          <p>{sides[5]}</p>
+        </div>
       </div>
     </div>
   );
