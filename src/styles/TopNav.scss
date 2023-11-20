@@ -35,24 +35,3 @@
   gap: 16px;
   font-size: 20px;
 }
-
-.nav-links {
-  display: flex;
-  gap: 16px;
-
-  a {
-    font-weight: bold;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    background-color: $background;
-    border: 2px solid $primary;
-    color: $primary;
-
-    &:hover {
-      background-color: $text;
-      color: $background;
-      border: 2px solid $text;
-    }
-  }
-}

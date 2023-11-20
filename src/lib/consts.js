@@ -154,3 +154,10 @@ export const JOBS = [
     technologies: ["Angular", ".Net", "Flask", "Express", "MongoDB"],
   },
 ];
+
+export const HEADER_HEIGHT = parseInt(
+  getComputedStyle(document.documentElement).getPropertyValue(
+    "--top-nav-height"
+  ),
+  10
+);
