@@ -1,8 +1,10 @@
 import "styles/TopNav.scss";
 import { Link } from "react-scroll";
 import Logo from "assets/griffinLogo.svg";
-import { HEADER_HEIGHT, SECTION_IDS } from "lib/consts";
+import { BREAKS, HEADER_HEIGHT, SECTION_IDS } from "lib/consts";
 import NavLinks from "./NavLinks";
+import ResponsiveComponent from "./ResponsiveComponent";
+import HamburgerButton from "./HamburgerButton";
 
 function TopNav() {
   return (
@@ -19,7 +21,11 @@ function TopNav() {
           <b>Griffin</b>&nbsp;McCormick
         </span>
       </Link>
-      <NavLinks />
+      <ResponsiveComponent
+        MobileComponent={HamburgerButton}
+        DesktopComponent={NavLinks}
+        breakpoint={BREAKS.DESKTOP}
+      />
     </header>
   );
 }

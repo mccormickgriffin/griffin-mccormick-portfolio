@@ -161,3 +161,7 @@ export const HEADER_HEIGHT = parseInt(
   ),
   10
 );
+
+export const BREAKS = {
+  DESKTOP: 1080
+};
