@@ -34,6 +34,14 @@
 
 .menu {
   position: fixed;
-  right: $padding-large;
-  top: $top-nav-height;
+  left: 0;
+  top: calc(#{$top-nav-height} - 100vh);
+  height: calc(100vh - #{$top-nav-height});
+  width: 100%;
+  background-color: $background;
+  animation: slide-down 1s forwards;
+}
+
+@keyframes slide-down {
+  100% { top: $top-nav-height }
 }

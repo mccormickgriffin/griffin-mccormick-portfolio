@@ -4,6 +4,10 @@
 .nav-links {
     display: flex;
     gap: $padding-standard;
+
+    @media screen and (max-width: 1080px) {
+      flex-direction: column;
+    }
   
     a {
       font-weight: bold;
