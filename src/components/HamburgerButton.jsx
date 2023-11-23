@@ -21,11 +21,9 @@ function HamburgerButton() {
         <div className="bar"></div>
         <div className="bar"></div>
       </button>
-      {isOpen && (
-        <div className="menu">
-          <NavLinks />
-        </div>
-      )}
+      <div className={`menu ${isOpen ? 'open' : 'closed'}`}>
+        <NavLinks />
+      </div>
     </>
   );
 }

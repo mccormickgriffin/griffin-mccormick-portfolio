@@ -33,15 +33,33 @@
 }
 
 .menu {
+  z-index: -1;
   position: fixed;
-  left: 0;
-  top: calc(#{$top-nav-height} - 100vh);
+  right: -100vw;
+  top: $top-nav-height;
   height: calc(100vh - #{$top-nav-height});
-  width: 100%;
-  background-color: $background;
-  animation: slide-down 1s forwards;
+  background-color: rgba($background, 0.95);
+
+  &.open {
+    animation: slide-in 0.3s forwards;
+  }
+
+  &.closed {
+    animation: slide-out 0.3s backwards;
+  }
 }
 
-@keyframes slide-down {
-  100% { top: $top-nav-height }
+@keyframes slide-in {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100vw;
+  }
 }

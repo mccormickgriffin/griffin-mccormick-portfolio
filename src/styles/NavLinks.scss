@@ -4,10 +4,6 @@
 .nav-links {
     display: flex;
     gap: $padding-standard;
-
-    @media screen and (max-width: 1080px) {
-      flex-direction: column;
-    }
   
     a {
       font-weight: bold;
@@ -22,6 +18,23 @@
         background-color: $text;
         color: $background;
         border: 2px solid $text;
+      }
+    }
+
+    @media screen and (max-width: 1080px) {
+      flex-direction: column;
+      padding: $padding-standard $padding-large;
+
+      a {
+        border: none;
+        text-align: right;
+        background-color: transparent;
+
+        &:hover {
+          background-color: transparent;
+          color: $text;
+          border: none;
+        }
       }
     }
   }
