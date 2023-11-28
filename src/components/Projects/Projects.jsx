@@ -1,7 +1,7 @@
 import "styles/Projects.scss";
 import { SECTION_IDS } from "lib/consts";
 import ProjectTrack from "./ProjectTrack";
-import ProjectCards from "./ProjectCrards";
+import ProjectCards from "./ProjectCards";
 
 function Projects() {
   return (
