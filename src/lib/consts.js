@@ -53,6 +53,12 @@ export const PROJECTS = [
       "Stand alone server to help send emails with feedback messages from many applications",
     technologies: ["Express.js", "AWS", "Microservice", "NodeMailer"],
   },
+  {
+    name: "Github Contribution Graph Writer",
+    description:
+      "Interactive python application allowing users to spice up their Github profile by writting a word in their commit contribution graph",
+    technologies: ["Python", "Git"],
+  },
 ];
 
 // export const jobs = [
